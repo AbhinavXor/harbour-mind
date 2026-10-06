@@ -1,0 +1,239 @@
+---
+import "@fontsource/newsreader/400.css";
+import "@fontsource/newsreader/500.css";
+import "@fontsource/newsreader/600.css";
+import "@fontsource/manrope/400.css";
+import "@fontsource/manrope/500.css";
+import "@fontsource/manrope/600.css";
+import "@fontsource/manrope/700.css";
+import "../styles/global.css";
+
+const colours = [
+  ["Shell", "#F7F2E8"],
+  ["Sea Glass", "#91C3CE"],
+  ["Coastal Sage", "#AABCA0"],
+  ["Dune", "#D9C394"],
+  ["Eucalyptus", "#789487"],
+  ["Paperbark", "#40372F"],
+  ["Sunset", "#CF6729"],
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Harbour Mind — Brand System</title>
+    <meta
+      name="description"
+      content="Brand identity, colour, typography and illustration system for the Harbour Mind independent concept project."
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="/">
+          <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+            <path class="mark-horizon" d="M11 26.5H53" />
+            <path class="mark-pier" d="M32 16v24" />
+            <path class="mark-wave" d="M10 39c7.3-6.4 14.7-6.4 22 0s14.7 6.4 22 0" />
+            <circle class="mark-sun" cx="45.5" cy="17.5" r="4.5" />
+          </svg>
+          <span class="brand-wordmark"><span>Harbour</span><span>Mind</span></span>
+        </a>
+
+        <a class="nav-project" href="/">← Back to website</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="case-hero">
+        <div class="container case-hero-grid">
+          <div>
+            <p class="project-label"><span class="project-dot"></span>Independent concept project</p>
+            <h1>Harbour Mind</h1>
+          </div>
+
+          <div class="case-intro">
+            <p>
+              A visual identity and digital direction for an Australian anxiety-treatment
+              brand — designed to feel credible, warm and distinctly coastal without
+              becoming clinical, sentimental or clichéd.
+            </p>
+            <dl>
+              <div><dt>Discipline</dt><dd>Brand identity · Web design · Illustration</dd></div>
+              <div><dt>Direction</dt><dd>Warm editorial · Coastal · Quietly playful</dd></div>
+              <div><dt>Status</dt><dd>Independent concept project</dd></div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-logo-section">
+        <div class="container">
+          <div class="case-title-row">
+            <div>
+              <p class="eyebrow">01 · Logo system</p>
+              <h2>A harbour, a horizon and one small piece of sunlight.</h2>
+            </div>
+            <p>
+              The mark combines a horizon line, a vertical pier and a moving wave.
+              A small burnt-orange sun gives the system a human point of warmth.
+            </p>
+          </div>
+
+          <div class="logo-showcase">
+            <div class="logo-primary">
+              <svg class="brand-mark brand-mark-xl" viewBox="0 0 64 64" aria-hidden="true">
+                <path class="mark-horizon" d="M11 26.5H53" />
+                <path class="mark-pier" d="M32 16v24" />
+                <path class="mark-wave" d="M10 39c7.3-6.4 14.7-6.4 22 0s14.7 6.4 22 0" />
+                <circle class="mark-sun" cx="45.5" cy="17.5" r="4.5" />
+              </svg>
+              <div class="case-wordmark">Harbour Mind</div>
+            </div>
+
+            <div class="logo-secondary">
+              <svg class="brand-mark brand-mark-xl" viewBox="0 0 64 64" aria-hidden="true">
+                <path class="mark-horizon" d="M11 26.5H53" />
+                <path class="mark-pier" d="M32 16v24" />
+                <path class="mark-wave" d="M10 39c7.3-6.4 14.7-6.4 22 0s14.7 6.4 22 0" />
+                <circle class="mark-sun" cx="45.5" cy="17.5" r="4.5" />
+              </svg>
+              <div class="stacked-wordmark"><span>Harbour</span><span>Mind</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section case-colour-section">
+        <div class="container">
+          <div class="case-title-row">
+            <div>
+              <p class="eyebrow">02 · Colour</p>
+              <h2>Sun-bleached, soft and grounded.</h2>
+            </div>
+            <p>
+              The palette takes cues from salt, water, eucalyptus, sand and bark.
+              Sunset orange is deliberately scarce, making calls to action feel warm
+              rather than loud.
+            </p>
+          </div>
+
+          <div class="case-colour-grid">
+            {colours.map(([name, hex]) => (
+              <div class="case-swatch" style={`--case-colour:${hex}`}>
+                <div></div>
+                <strong>{name}</strong>
+                <span>{hex}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="section case-type-section">
+        <div class="container case-type-grid">
+          <div>
+            <p class="eyebrow">03 · Typography</p>
+            <h2>Editorial warmth with practical clarity.</h2>
+          </div>
+
+          <div class="type-board">
+            <div class="type-display">
+              <span>Newsreader</span>
+              <strong>A calm voice<br />with character.</strong>
+              <small>Display · headlines · editorial moments</small>
+            </div>
+
+            <div class="type-body">
+              <span>Manrope</span>
+              <p>
+                Clear, contemporary and highly readable across navigation,
+                service information, forms and smaller interface text.
+              </p>
+              <small>Body · navigation · interface</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section case-illustration-section">
+        <div class="container">
+          <div class="case-title-row">
+            <div>
+              <p class="eyebrow">04 · Illustration</p>
+              <h2>Gentle humour, never at the person’s expense.</h2>
+            </div>
+            <p>
+              The character is intentionally simple. Humour comes from familiar
+              anxiety situations — not from making anxiety itself the joke.
+            </p>
+          </div>
+
+          <div class="illustration-board">
+            <div class="illustration-tile sea-tile">
+              <svg viewBox="0 0 430 300" aria-hidden="true">
+                <path class="scribble-line" d="M25 223c92-16 197 17 380-10" />
+                <circle class="figure-head-fill" cx="188" cy="114" r="15" />
+                <circle class="figure-stroke thin" cx="188" cy="114" r="15" />
+                <path class="figure-stroke thin" d="M188 129v56m0-35-32 19m32-19 34 15m-34 20-25 37m25-37 27 36" />
+                <path class="tiny-shark" d="M285 211c19-31 40-32 61-2-18-6-37-6-61 2Z" />
+              </svg>
+              <span>Pier + shark</span>
+            </div>
+
+            <div class="illustration-tile dune-tile">
+              <svg viewBox="0 0 430 300" aria-hidden="true">
+                <path class="scribble-line" d="M25 218c109-42 220 35 382-17" />
+                <circle class="figure-head-fill" cx="211" cy="99" r="15" />
+                <circle class="figure-stroke thin" cx="211" cy="99" r="15" />
+                <path class="figure-stroke thin" d="m211 115 3 63m-2-39-52-30m52 30 59-38m-57 77-36 44m36-44 40 39" />
+              </svg>
+              <span>Tightrope</span>
+            </div>
+
+            <div class="illustration-tile sage-tile">
+              <svg viewBox="0 0 430 300" aria-hidden="true">
+                <path class="scribble-line" d="M110 128c-42-57 28-100 72-56 15-60 106-46 103 15 52-13 73 56 18 76-25 45-99 23-100-26-47 38-114-3-93-9Z" />
+                <circle class="figure-head-fill" cx="213" cy="209" r="15" />
+                <circle class="figure-stroke thin" cx="213" cy="209" r="15" />
+                <path class="figure-stroke thin" d="M213 224v51m0-29-27 17m27-17 29 15" />
+              </svg>
+              <span>Rumination</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-ending">
+        <div class="container case-ending-card">
+          <div>
+            <p class="eyebrow eyebrow-light">05 · Digital direction</p>
+            <h2>Designed to feel human before it asks for trust.</h2>
+          </div>
+          <div>
+            <p>
+              Responsive layouts, restrained motion, strong contrast and a clear
+              content hierarchy keep the experience calm and practical.
+            </p>
+            <a class="button button-light" href="/">View the live concept →</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <p class="footer-note">
+          Harbour Mind is an independent portfolio concept. It is not a real
+          psychology clinic or healthcare provider.
+        </p>
+        <div class="footer-right"><a href="/">Live website</a></div>
+      </div>
+    </footer>
+  </body>
+</html>

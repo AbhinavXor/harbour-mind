@@ -1,17 +1,627 @@
 ---
+import "@fontsource/newsreader/400.css";
+import "@fontsource/newsreader/500.css";
+import "@fontsource/newsreader/600.css";
+import "@fontsource/manrope/400.css";
+import "@fontsource/manrope/500.css";
+import "@fontsource/manrope/600.css";
+import "@fontsource/manrope/700.css";
+import "../styles/global.css";
 
+const title = "Harbour Mind — Coastal Psychology Brand Concept";
+const description =
+  "Harbour Mind is an independent brand and digital experience concept exploring a warmer, distinctly Australian direction for psychology services.";
 ---
 
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#F7F2E8" />
+    <meta name="color-scheme" content="light" />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href="/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta name="twitter:card" content="summary" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" id="site-header">
+      <div class="container nav">
+        <a class="brand" href="#top" aria-label="Harbour Mind home">
+          <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+            <path class="mark-horizon" d="M11 26.5H53" />
+            <path class="mark-pier" d="M32 16v24" />
+            <path class="mark-wave" d="M10 39c7.3-6.4 14.7-6.4 22 0s14.7 6.4 22 0" />
+            <circle class="mark-sun" cx="45.5" cy="17.5" r="4.5" />
+          </svg>
+
+          <span class="brand-wordmark">
+            <span>Harbour</span>
+            <span>Mind</span>
+          </span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          id="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="main-nav"
+          aria-label="Open navigation"
+        >
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="main-nav" id="main-nav" aria-label="Primary navigation">
+          <a href="#anxiety">Anxiety</a>
+          <a href="#approach">Approach</a>
+          <a href="#expect">What to expect</a>
+          <a href="#faqs">FAQs</a>
+          <a class="nav-project" href="/case-study">Brand system ↗</a>
+          <a class="nav-cta" href="#contact">Start a conversation</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <div class="project-label">
+              <span class="project-dot"></span>
+              Independent concept project · Melbourne, Australia
+            </div>
+
+            <h1>
+              Some days feel
+              <span class="hero-emphasis">bigger</span>
+              than they are.
+            </h1>
+
+            <p class="hero-intro">
+              A calm, practical visual direction for anxiety support — with
+              coastal warmth, a little humour and none of the usual mental-health clichés.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button button-primary" href="#contact">
+                Start a conversation
+                <span aria-hidden="true">↘</span>
+              </a>
+
+              <a class="quiet-link" href="#anxiety">
+                Take a look around
+                <span aria-hidden="true">↓</span>
+              </a>
+            </div>
+
+            <div class="hero-meta" aria-label="Concept attributes">
+              <span>Warm, not clinical</span>
+              <span>Australian coastal</span>
+              <span>Illustration-led</span>
+            </div>
+          </div>
+
+          <div class="hero-scene reveal" aria-label="Illustration of a person on a pier noticing a small shark fin">
+            <div class="hero-sky"></div>
+            <div class="hero-sun"></div>
+            <div class="hero-cloud cloud-one"></div>
+            <div class="hero-cloud cloud-two"></div>
+
+            <svg class="hero-drawing" viewBox="0 0 760 700" role="img" aria-hidden="true">
+              <path class="shoreline" d="M0 493C115 455 213 486 316 471c128-19 230 20 444-26" />
+              <path class="shoreline soft" d="M0 540c89-25 155 6 246-11 134-25 271 15 514-30" />
+
+              <path class="pier-top" d="M184 384 728 422 725 450 177 413Z" />
+              <path class="pier-leg" d="M275 410 258 576M565 432 544 606" />
+
+              <circle class="figure-head-fill" cx="363" cy="303" r="23" />
+              <circle class="figure-stroke" cx="363" cy="303" r="23" />
+              <path class="figure-stroke" d="M363 327v74" />
+              <path class="figure-stroke" d="m362 348-43 31" />
+              <path class="figure-stroke" d="m363 350 51 20" />
+              <path class="figure-stroke" d="m363 401-32 53" />
+              <path class="figure-stroke" d="m363 401 35 55" />
+
+              <path class="tiny-shark" d="M530 521c23-37 48-39 72-2-21-8-44-8-72 2Z" />
+              <path class="water-ripple" d="M500 533c42-10 78 12 124-1" />
+            </svg>
+
+            <div class="scene-caption">
+              <span>Calm water.</span>
+              <span>Tiny shark.</span>
+              <strong>Very convincing brain.</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="container coastal-rule" aria-hidden="true">
+          <span></span>
+          <svg viewBox="0 0 150 22">
+            <path d="M2 11c19-8 31-8 49 0s30 8 48 0 30-8 49 0" />
+          </svg>
+          <span></span>
+        </div>
+      </section>
+
+      <section class="trust-strip" aria-label="Brand principles">
+        <div class="container trust-grid">
+          <div>
+            <strong>Human first</strong>
+            <span>Clear language, no theatre.</span>
+          </div>
+          <div>
+            <strong>Evidence-aware</strong>
+            <span>No guarantees or miracle claims.</span>
+          </div>
+          <div>
+            <strong>Distinctly local</strong>
+            <span>Coastal Australia without clichés.</span>
+          </div>
+          <div>
+            <strong>Quietly playful</strong>
+            <span>Humour where it earns its place.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section anxiety-section" id="anxiety">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <p class="eyebrow">Anxiety can look ordinary</p>
+              <h2>It isn’t always dramatic.</h2>
+            </div>
+
+            <p class="section-summary">
+              Sometimes it is one conversation replayed seven times. Sometimes
+              it is a tiny task that somehow acquires its own weather system.
+            </p>
+          </div>
+
+          <div class="story-grid">
+            <article class="story-card reveal">
+              <div class="story-top">
+                <span class="story-number">01</span>
+                <span class="story-label">Overthinking</span>
+              </div>
+
+              <svg class="story-art rumination-mini" viewBox="0 0 300 190" aria-hidden="true">
+                <circle class="figure-head-fill" cx="82" cy="124" r="12" />
+                <circle class="figure-stroke thin" cx="82" cy="124" r="12" />
+                <path class="figure-stroke thin" d="M82 136v37m0-21-17 12m17-12 18 10" />
+                <path class="scribble-line" d="M103 96c-28-38 21-72 48-38 12-43 73-29 64 15 41-10 56 48 17 60-18 38-77 24-79-13-32 31-80 3-50-24Z" />
+              </svg>
+
+              <h3>The replay button</h3>
+              <p>
+                “I think that went fine” followed immediately by a complete
+                forensic reconstruction of the last conversation.
+              </p>
+            </article>
+
+            <article class="story-card story-card-featured reveal">
+              <div class="story-top">
+                <span class="story-number">02</span>
+                <span class="story-label">Avoidance</span>
+              </div>
+
+              <svg class="story-art rope-mini" viewBox="0 0 300 190" aria-hidden="true">
+                <path class="scribble-line" d="M20 145c73-30 161 29 262-13" />
+                <circle class="figure-head-fill" cx="145" cy="74" r="12" />
+                <circle class="figure-stroke thin" cx="145" cy="74" r="12" />
+                <path class="figure-stroke thin" d="m145 86 4 47m-3-31-30-20m31 20 34-24m-32 55-23 34m23-34 28 31" />
+              </svg>
+
+              <h3>Next week is packed</h3>
+              <p>
+                A small task quietly relocates itself from Monday to Friday to
+                “when things settle down.”
+              </p>
+            </article>
+
+            <article class="story-card reveal">
+              <div class="story-top">
+                <span class="story-number">03</span>
+                <span class="story-label">What-ifs</span>
+              </div>
+
+              <svg class="story-art wave-mini" viewBox="0 0 300 190" aria-hidden="true">
+                <circle class="figure-head-fill" cx="69" cy="123" r="12" />
+                <circle class="figure-stroke thin" cx="69" cy="123" r="12" />
+                <path class="figure-stroke thin" d="M69 135v36m0-20-17 12m17-12 16 10" />
+                <path class="scribble-line" d="M114 148c25-97 111-105 153-8-42-31-76-31-99-8-18 18-26 26-54 16Z" />
+              </svg>
+
+              <h3>Forecast: everything</h3>
+              <p>
+                Your brain has prepared six possible endings, including four
+                that nobody ordered.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="breather-section">
+        <div class="container breather-grid">
+          <div class="tightrope-scene reveal">
+            <svg viewBox="0 0 700 430" role="img" aria-label="A small figure balancing on a line">
+              <path class="tightrope-line" d="M45 282c171-35 363 23 612-9" />
+              <circle class="figure-head-fill" cx="341" cy="150" r="20" />
+              <circle class="figure-stroke" cx="341" cy="150" r="20" />
+              <path class="figure-stroke" d="m341 171 5 79" />
+              <path class="figure-stroke" d="m344 193-72-36" />
+              <path class="figure-stroke" d="m344 193 83-53" />
+              <path class="figure-stroke" d="m346 249-49 53" />
+              <path class="figure-stroke" d="m346 249 59 43" />
+              <path class="motion-mark" d="m260 135-22-12m196 10 23-18" />
+            </svg>
+          </div>
+
+          <div class="breather-copy reveal">
+            <p class="eyebrow">A little room to wobble</p>
+            <blockquote>Wobbly is still moving.</blockquote>
+            <p>
+              The character language stays deliberately simple: expressive
+              enough to feel human, restrained enough to remain credible.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section approach-section" id="approach">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <p class="eyebrow">The approach</p>
+              <h2>Less performance.<br />More useful conversation.</h2>
+            </div>
+
+            <p class="section-summary">
+              The content model avoids dramatic promises. It makes room for
+              understanding, practice and a clear next step.
+            </p>
+          </div>
+
+          <div class="approach-list">
+            <article class="approach-row reveal">
+              <span class="approach-index">01</span>
+              <div>
+                <h3>Understand</h3>
+                <p>Notice the pattern, the pressure around it and what tends to keep it going.</p>
+              </div>
+              <span class="approach-mark" aria-hidden="true">○</span>
+            </article>
+
+            <article class="approach-row reveal">
+              <span class="approach-index">02</span>
+              <div>
+                <h3>Practise</h3>
+                <p>Explore useful responses without pretending difficult situations suddenly become easy.</p>
+              </div>
+              <span class="approach-mark" aria-hidden="true">↝</span>
+            </article>
+
+            <article class="approach-row reveal">
+              <span class="approach-index">03</span>
+              <div>
+                <h3>Carry forward</h3>
+                <p>Build a clearer sense of what helps and how it might fit into everyday life.</p>
+              </div>
+              <span class="approach-mark" aria-hidden="true">∿</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="expect-section" id="expect">
+        <div class="container expect-grid">
+          <div class="expect-copy reveal">
+            <p class="eyebrow">What to expect</p>
+            <h2>A simple first step.</h2>
+            <p>
+              No elaborate funnel. No fake urgency. Just enough information to
+              understand the next move.
+            </p>
+          </div>
+
+          <ol class="expect-list">
+            <li class="reveal">
+              <span>1</span>
+              <div>
+                <h3>Reach out</h3>
+                <p>Start with a short enquiry. No perfectly prepared explanation required.</p>
+              </div>
+            </li>
+            <li class="reveal">
+              <span>2</span>
+              <div>
+                <h3>First conversation</h3>
+                <p>Clarify what you are looking for and whether the service is an appropriate fit.</p>
+              </div>
+            </li>
+            <li class="reveal">
+              <span>3</span>
+              <div>
+                <h3>Work together</h3>
+                <p>If it is suitable, agree on a practical next step and continue from there.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section thought-section">
+        <div class="container thought-grid">
+          <div class="thought-copy reveal">
+            <p class="eyebrow">Rumination</p>
+            <h2>Brains can be very convincing storytellers.</h2>
+            <p>
+              The joke is never anxiety itself. The humour sits around the
+              familiar situations people recognise in themselves.
+            </p>
+          </div>
+
+          <div class="thought-scene reveal">
+            <svg viewBox="0 0 700 600" role="img" aria-label="A figure beneath a large tangled thought">
+              <path class="thought-cloud" d="M120 232c-62-74 25-151 103-94 14-94 145-102 174-17 80-58 172 12 139 99 94 26 80 151-11 164-30 94-166 93-205 11-68 73-189 20-161-78-74-3-97-56-39-85Z" />
+              <path class="thought-thread" d="M136 235c91-67 176 83 285 8 85-59 146 41 60 94-73 45-147-72-250-7-73 46-140-34-62-87" />
+              <circle class="figure-head-fill" cx="350" cy="438" r="21" />
+              <circle class="figure-stroke" cx="350" cy="438" r="21" />
+              <path class="figure-stroke" d="M350 460v73m0-50-37 25m37-25 38 23m-38 27-31 45m31-45 35 44" />
+            </svg>
+
+            <div class="thought-note">
+              <span>11:42 pm</span>
+              <strong>“Quick thought…”</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section brand-preview">
+        <div class="container brand-preview-grid">
+          <div class="brand-preview-copy reveal">
+            <p class="eyebrow">A small brand system</p>
+            <h2>Built to feel calm before it says a word.</h2>
+            <p>
+              A restrained palette, tactile textures and a logo inspired by the
+              horizon, a pier and the movement of water.
+            </p>
+
+            <a class="quiet-link" href="/case-study">
+              View the full brand system
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+          <div class="brand-board reveal">
+            <div class="brand-board-logo">
+              <svg class="brand-mark brand-mark-large" viewBox="0 0 64 64" aria-hidden="true">
+                <path class="mark-horizon" d="M11 26.5H53" />
+                <path class="mark-pier" d="M32 16v24" />
+                <path class="mark-wave" d="M10 39c7.3-6.4 14.7-6.4 22 0s14.7 6.4 22 0" />
+                <circle class="mark-sun" cx="45.5" cy="17.5" r="4.5" />
+              </svg>
+
+              <div>
+                <span>Harbour</span>
+                <span>Mind</span>
+              </div>
+            </div>
+
+            <div class="palette-row" aria-label="Brand colour palette">
+              <span style="--swatch:#F7F2E8"><small>Shell</small></span>
+              <span style="--swatch:#91C3CE"><small>Sea Glass</small></span>
+              <span style="--swatch:#AABCA0"><small>Sage</small></span>
+              <span style="--swatch:#D9C394"><small>Dune</small></span>
+              <span style="--swatch:#40372F"><small>Bark</small></span>
+              <span style="--swatch:#CF6729"><small>Sunset</small></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section faq-section" id="faqs">
+        <div class="container faq-grid">
+          <div class="faq-intro reveal">
+            <p class="eyebrow">Questions</p>
+            <h2>A few things people often wonder.</h2>
+            <p>
+              In a real practice, every clinical and administrative answer
+              would be reviewed by the practitioner before publication.
+            </p>
+          </div>
+
+          <div class="faq-list">
+            <article class="faq-item">
+              <button class="faq-button" type="button" aria-expanded="false">
+                <span>What happens in a first appointment?</span>
+                <span class="faq-plus" aria-hidden="true">+</span>
+              </button>
+              <div class="faq-answer">
+                <div>
+                  <p>
+                    This is placeholder content for the concept. The final
+                    practice would explain its actual intake and appointment process here.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="faq-item">
+              <button class="faq-button" type="button" aria-expanded="false">
+                <span>Can sessions be online?</span>
+                <span class="faq-plus" aria-hidden="true">+</span>
+              </button>
+              <div class="faq-answer">
+                <div>
+                  <p>
+                    Delivery modes, eligibility and location requirements would
+                    be confirmed by the real practice before launch.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="faq-item">
+              <button class="faq-button" type="button" aria-expanded="false">
+                <span>Do I need a referral?</span>
+                <span class="faq-plus" aria-hidden="true">+</span>
+              </button>
+              <div class="faq-answer">
+                <div>
+                  <p>
+                    This concept intentionally avoids presenting administrative
+                    or clinical information as real-world advice.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="faq-item">
+              <button class="faq-button" type="button" aria-expanded="false">
+                <span>Why avoid the usual therapy imagery?</span>
+                <span class="faq-plus" aria-hidden="true">+</span>
+              </button>
+              <div class="faq-answer">
+                <div>
+                  <p>
+                    The identity relies on typography, coastal texture and
+                    understated illustration rather than brains, puzzle pieces,
+                    lotus flowers or generic stock photography.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact">
+        <div class="container">
+          <div class="contact-card reveal">
+            <div>
+              <p class="eyebrow eyebrow-light">Concept interaction</p>
+              <h2>You don’t need to have everything figured out before reaching out.</h2>
+            </div>
+
+            <div class="contact-side">
+              <p>
+                Harbour Mind is a portfolio concept, so this CTA does not collect
+                personal or health information.
+              </p>
+              <a class="button button-light" href="/case-study">
+                See the design thinking
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+
+            <svg class="contact-wave" viewBox="0 0 600 120" aria-hidden="true">
+              <path d="M4 65c74-49 129-49 201 0s127 49 198 0 120-49 193 0" />
+            </svg>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="brand footer-brand" href="#top">
+            <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+              <path class="mark-horizon" d="M11 26.5H53" />
+              <path class="mark-pier" d="M32 16v24" />
+              <path class="mark-wave" d="M10 39c7.3-6.4 14.7-6.4 22 0s14.7 6.4 22 0" />
+              <circle class="mark-sun" cx="45.5" cy="17.5" r="4.5" />
+            </svg>
+            <span class="brand-wordmark">
+              <span>Harbour</span>
+              <span>Mind</span>
+            </span>
+          </a>
+
+          <p class="footer-note">
+            Independent concept project exploring brand and digital direction
+            for an Australian psychology service. Harbour Mind is not a real clinic.
+          </p>
+        </div>
+
+        <div class="footer-right">
+          <a href="#anxiety">Anxiety</a>
+          <a href="#approach">Approach</a>
+          <a href="#faqs">FAQs</a>
+          <a href="/case-study">Brand system</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const header = document.getElementById("site-header");
+      const menuButton = document.getElementById("menu-toggle");
+      const nav = document.getElementById("main-nav");
+
+      const updateHeader = () => {
+        header?.classList.toggle("scrolled", window.scrollY > 12);
+      };
+
+      updateHeader();
+      window.addEventListener("scroll", updateHeader, { passive: true });
+
+      menuButton?.addEventListener("click", () => {
+        const open = nav?.classList.toggle("open") ?? false;
+        menuButton.setAttribute("aria-expanded", String(open));
+        document.body.classList.toggle("menu-open", open);
+      });
+
+      nav?.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          nav.classList.remove("open");
+          menuButton?.setAttribute("aria-expanded", "false");
+          document.body.classList.remove("menu-open");
+        });
+      });
+
+      document.querySelectorAll(".faq-item").forEach((item) => {
+        const button = item.querySelector(".faq-button");
+        button?.addEventListener("click", () => {
+          const open = item.classList.toggle("open");
+          button.setAttribute("aria-expanded", String(open));
+        });
+      });
+
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      if (reduceMotion) {
+        document.querySelectorAll(".reveal").forEach((el) => el.classList.add("visible"));
+      } else {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.12 }
+        );
+
+        document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+      }
+    </script>
+  </body>
 </html>
